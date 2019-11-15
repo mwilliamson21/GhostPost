@@ -1,23 +1,35 @@
 <!DOCTYPE html>
-{% load static %}
-<html lang="en">
+<html lang="en"></html>
+
+<a href="/">GhostPost</a>
+<a href="totalboasts/">Boasts</a>
+<a href="totalroasts/">Roasts</a>
+<a href="/postform/{{Post.id}}/upvote/" method="post">Vote Up</a>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet"
-          
-          
-    <title>GhostPost</title>
+         
 </head>
+<h1>{{BoastRoastForm}}</h1>
+<ul style='list-style:none'></ul>
 <body>
-   <div class="header">
-       <h1>
-           <a href="/">GhostPost</a>
-       </h1>
-   </div>
-   <nav>
-
-   </nav> 
-</body>
-</html>
+   <div class="Post a Boast or Roast!">
+       <h1> {{header}}
+        {{% for item in boastsandroasts}}
+           <h2>{{data.content}}</h2>>
+            {{% if data.boast %}}
+                <h3>Boast</h3>
+            {{% else %}}
+                <h4>Roast</h4>
+            {{ % end if% }}
+            <h5>data.upvote</h5>
+            <button><a href='/upvote/{{ data.id/button>}}'>Upvote</a><button>
+            <h6>{{data.downvote}}</h6>
+            <button><a href='downvote/{{data.id}}'>Downvote</a></button>
+            <h7>{{ data.submit_post_date}}</h7>
+            <button><a href='/delete/{{data.id}}'>delete Post</a></button>
+        {{% else %}}
+    </ul>
+    

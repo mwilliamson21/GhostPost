@@ -12,22 +12,22 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AddField(
-            model_name='boasts_roasts',
+            model_name='Post',
             name='down_votes',
             field=models.IntegerField(default=0),
         ),
         migrations.AlterField(
-            model_name='boasts_roasts',
+            model_name='Post',
             name='post_content',
             field=models.CharField(max_length=280),
         ),
         migrations.AlterField(
-            model_name='boasts_roasts',
+            model_name='Post',
             name='submission_time',
             field=models.DateTimeField(default=django.utils.timezone.now),
         ),
         migrations.AlterField(
-            model_name='boasts_roasts',
+            model_name='Post',
             name='up_votes',
             field=models.IntegerField(default=0),
         ),

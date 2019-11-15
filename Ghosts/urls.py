@@ -16,14 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from GhostPost import views
-from GhostPost.models import Boasts_Roasts
+# from GhostPost.models import Post
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='homepage'),
-    path('addBoast_Roast/', views.add_Boast_Roast_view, name='addBoast_Roast'),
-    path('upvote/<int:id>'), views.upvote),
-    path('downvote/<int:id>'), views.downvote),
-    path('boasts/',views.boasts, name='boasts'),
+    path('addBoast_Roast/', views.add_Post_view, name='addPost'),
+    path('upvote/<int:id>', views.upvote),
+    path('downvote/<int:id>', views.downvote),
+    path('boasts/', views.boasts, name='boasts'),
     path('roasts/', views.roasts, name='roasts'),
 ]
