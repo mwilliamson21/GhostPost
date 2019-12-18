@@ -14,7 +14,7 @@ class Post(models.Model):
     up_votes = models.IntegerField(default=0)
     down_votes = models.IntegerField(default=0)
     total_votes = models.IntegerField(default=0)
-    submission_time = models.DateTimeField(auto_now_add=True, blank=True)
+    post_date = models.DateTimeField(auto_now_add=True, blank=True)
 
     def _str_(self):
         return self.content

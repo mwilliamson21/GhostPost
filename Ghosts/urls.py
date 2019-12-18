@@ -15,15 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from GhostPost import views
-# from GhostPost.models import Post
+from Ghosts import views
+# from Ghosts.models import Post
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='homepage'),
-    path('addBoast_Roast/', views.add_Post_view, name='addPost'),
-    path('upvote/<int:id>', views.upvote),
-    path('downvote/<int:id>', views.downvote),
-    path('boasts/', views.boasts, name='boasts'),
-    path('roasts/', views.roasts, name='roasts'),
+    path('addBoast_Roast/', views.add_post, name='addPost'),
+    path('up_votes/<int:id>', views.up_votes),
+    path('down_votes/<int:id>', views.down_votes),
+    path('boast/', views.boast, name='boast'),
+    path('roast/', views.roast, name='roast'),
 ]
