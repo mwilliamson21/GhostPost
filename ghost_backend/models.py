@@ -5,6 +5,7 @@ Ghost: Boasts, Roasts
     integer field for up and down votes
     datetime field for submit time
 """
+
 from django.db import models
 
 
